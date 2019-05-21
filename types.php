@@ -169,7 +169,5 @@ echo $res;
     var_dump(isset($n));
     ?>
 </ul>
-
-<p>php数据类型之数组</p>
 </body>
 </html>
