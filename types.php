@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>php数据类型</title>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
 </head>
 <body>
 <?php
@@ -42,7 +42,7 @@ $a = true;
 $b = True;
 $c = TRUe;
 $d = TRUE;
-echo 'true = '.$a,' | True = '.$b,' | TRUe = '.$c,' | TRUE  = '.$d;
+echo 'true = ' . $a, ' | True = ' . $b, ' | TRUe = ' . $c, ' | TRUE  = ' . $d;
 
 echo '<p>常见数据类型转换为boolean类型的值</p>';
 
@@ -50,7 +50,7 @@ $a = 0;
 $b = '';
 $c = false;
 $d = NULL;
-$e= 0.0;
+$e = 0.0;
 $f = '0';
 $g = array();
 
@@ -66,7 +66,7 @@ $b = -123;
 $c = 0112; //8进制
 $d = 0x12; //16进制
 
-echo '123：'.$a,' |  -123：'.$b,' | 0112(8进制)：'.$c,' | 0x12(16进制)：'.$d;
+echo '123：' . $a, ' |  -123：' . $b, ' | 0112(8进制)：' . $c, ' | 0x12(16进制)：' . $d;
 
 echo '<p>整数溢出如果给定的一个数超出了 integer 的范围，将会被解释为 float。同样如果执行的运算结果超出了 integer 范围，也会返回 float。</p>';
 
@@ -102,7 +102,7 @@ echo '<p>一个字符串 string 就是由一系列的字符组成，其中每个
 <?php
 //实例 双引号解析变量，单引号不解析
 $name = "戴富阳";
-$str = "你的名字：$name";
+$str  = "你的名字：$name";
 echo $str;
 echo '</br>';
 $str = '你的名字：$name';
@@ -123,10 +123,10 @@ echo $str;
 
 <div>定界符的使用</div>
 <?php
-    $str1 = '每天进步一点点';
-    $str2 = '踏踏实实每一天';
+$str1 = '每天进步一点点';
+$str2 = '踏踏实实每一天';
 
-    $res = <<<ABC
+$res = <<<ABC
         如果
         \t $str1,
         '$str2'
@@ -135,7 +135,7 @@ echo $str;
         <i>富阳语录</i>
         <div>2019-05-21</div>
 ABC;
-    echo $res;
+echo $res;
 ?>
 
 <hr>
@@ -145,17 +145,17 @@ ABC;
 <ul>
     <li>明确定义为NULL类型的变量</li>
     <?php
-        $n = null;
-        var_dump($n);
+    $n = null;
+    var_dump($n);
     ?>
     <li>一个空变量，未初始化值</li>
     <?php
-        //var_dump($n1);
+    //var_dump($n1);
     ?>
     <li>使用函数unset()将变量销毁掉</li>
     <?php
-       /* unset($n);
-        var_dump($n);*/
+    /* unset($n);
+     var_dump($n);*/
     ?>
 </ul>
 <p>与NULLL类型相关的两个函数</p>
@@ -166,8 +166,10 @@ ABC;
     ?>
     <li>isset()可以向括号中间传入一个或者多个变量，变量与变量间用逗号分开。只要有有一个变量为null，则返回false。否则，则返回true。</li>
     <?php
-        var_dump(isset($n));
+    var_dump(isset($n));
     ?>
 </ul>
+
+<p>php数据类型之数组</p>
 </body>
 </html>
